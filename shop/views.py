@@ -101,7 +101,7 @@ def order_detail(request, pk):
 
     return render(request, 'shop/detail.html', context)
 
-def add_comment(request, product_id):
+def view_comment(request, product_id):
     product = get_object_or_404(Product, id=product_id)
     if request.method == 'POST':
         form = CommentModelForm(request.POST)
